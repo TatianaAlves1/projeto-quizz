@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloForm.css">
+    <title>Peguntas</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .titulo{
+            text-align: center;
+            margin: 40px auto;
+        }
+        .questao-bloco{
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+        .alternativa{
+            flex-grow: 2;
+        }
+        .pergunta{
+            font-size:30px ;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .alternativa-bloco{
+            width:100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            font-size:25px;
+            border-bottom: 1px solid rgb(223, 223, 223);
+            margin: 10px 25px;
+        }
+        input[type=checkbox]{
+            width: 20px;
+            height: 20px;
+            flex-basis: 20%;
+        } 
+        #prevBtn{
+            padding: 10px;
+            width: 110px;
+            border: none;
+            background-color: rgb(26, 26, 116);
+            color: white;
+            border-radius: 15px;
+        }
+        #nextBtn{
+            padding: 10px;
+            width: 110px;
+            border: none;
+            background-color: rgb(4, 228, 253);
+            border-radius: 15px;
+        }
+        .btns{
+            width: 100%;
+            display: flex;
+            justify-content: center ; 
+            margin-top: 20px;
+            gap:15px  
+        }
+
+
+    </style>
+</head>
+<body>
+    <head>
+        <h1 class="titulo">Quizz - Web</h1>
+    </head>
+    <main>
+        <form action="" id="regForm">
+
+            <div class="tab questao-bloco">
+                <div class="pergunta">Marque qual alternativa corresponde a uma linguagem de marcação:</div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem XML</div>
+                    <input type="checkbox" oninput="this.className = ''" >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Swift</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Javascript</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem HTML</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+            </div>
+
+            <div class="tab questao-bloco">
+                <div class="pergunta">Marque qual alternativa corresponde a uma linguagem de programação:</div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Teste testets etsadsad</div>
+                    <input type="checkbox" oninput="this.className = ''" >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Swift testeedsf</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Javascript aaaaaa</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem HTML bbbbbbbbb</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+            </div>
+            <div class="tab questao-bloco">
+                <div class="pergunta">Outra pegunta de interpretador:</div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Teste testets etsadsad</div>
+                    <input type="checkbox" oninput="this.className = ''" >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Swift testeedsf</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Javascript aaaaaa</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem HTML bbbbbbbbb</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+            </div>
+
+            <div class="tab questao-bloco">
+                <div class="pergunta">Outra pegunta de interpretador:</div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Teste testets etsadsad</div>
+                    <input type="checkbox" oninput="this.className = ''" >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Swift testeedsf</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem Javascript aaaaaa</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+                <div class="alternativa-bloco">
+                    <div class="alternativa">Linguagem HTML bbbbbbbbb</div>
+                    <input type="checkbox" oninput="this.className = ''"  >
+                </div>
+            </div>
+
+
+            <div style="overflow:auto;"class="btns">
+                  <button type="button" id="prevBtn"  onclick="nextPrev(-1)">Anterior</button>
+                  <button type="button" id="nextBtn"  onclick="nextPrev(1)">Próximo</button>
+              </div>
+            
+            
+              <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="scripts/tabScript.js"></script>
+</body>
+</html>
