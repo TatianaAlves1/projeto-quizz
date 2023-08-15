@@ -3,22 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+header{
+  color: #EDE247;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.8rem;
+}
 .questionario{
   width:100%;
-  height:100vh;
-  background-color: aqua;
+  height:80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 label{display: block;}
 .questao{
-  background-color: bisque;
-  border: 1px solid black;
+  background-color: #EDE247;
+  border: 1px solid rgba(203, 203, 203, 0.558);
   width: 650px; 
   padding: 50px;
   font-size: 20px;
-  border-radius: 15px;   
+  border-radius: 15px;  
+  box-shadow: 10px -10px 50px black; 
+}
+.questao:nth-child(2n+1){
+  background-color: #EBDB00;
 }
 .tab {
   display: none;
@@ -47,7 +56,7 @@ label{display: block;}
   background-color: #bbbbbb;
   border: none;
   border-radius: 50%;
-  display: inline-block;
+  display: none;
   opacity: 0.5;
 }
 
